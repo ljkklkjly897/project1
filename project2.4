@@ -1,0 +1,15 @@
+public class LegoContainers {
+
+    public static void main(String[] args) {
+        int amountOfBricks = 67;
+        int containerCapacity = 8;
+
+        int fullContainers = amountOfBricks / containerCapacity;
+        int totalContainers = (amountOfBricks + containerCapacity - 1) / containerCapacity;
+        int remainingBlocks = amountOfBricks % containerCapacity;
+
+        System.out.println("Full containers: " + fullContainers);
+        System.out.println("Total containers: " + totalContainers);
+        System.out.println("Blocks in the last container: " + remainingBlocks);
+    }
+}
