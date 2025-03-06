@@ -1,0 +1,20 @@
+public class WeightOnMars {
+
+    public static void main(String[] args) {
+       
+        float earthWeightBielecki = 70.5f;
+        float marsGravityBielecki = 0.38f;
+        double marsWeightBielecki = earthWeightBielecki * marsGravityBielecki;
+
+        System.out.println("Weight on Mars (double): " + String.format("%.4f", marsWeightBielecki));
+
+        int marsWeightIntBielecki = (int) marsWeightBielecki;
+        System.out.println("Weight on Mars (int): " + marsWeightIntBielecki);
+
+        char marsWeightCharBielecki = (char) marsWeightIntBielecki;
+        System.out.println("Weight on Mars (char): " + marsWeightCharBielecki);
+
+        int newIntBielecki = marsWeightCharBielecki + 10;
+        System.out.println("New int value after math operation: " + newIntBielecki);
+    }
+}
