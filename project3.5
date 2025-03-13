@@ -1,0 +1,27 @@
+import java.util.Random;
+
+public class FindMinMax {
+    public static void main(String[] args) {
+        Random random = new Random();
+        int count = 0;
+        int min = 100;
+        int max = 1;
+
+        while (count < 10) {
+            int number = random.nextInt(100) + 1;
+            System.out.println("Generated number: " + number);
+
+            if (number < min) {
+                min = number;
+            }
+            if (number > max) {
+                max = number;
+            }
+
+            count++;
+        }
+
+        System.out.println("Smallest number: " + min);
+        System.out.println("Largest number: " + max);
+    }
+}
