@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class Exercise4 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter the first string: ");
+        String firstString = scanner.nextLine();
+        System.out.print("Enter the second string: ");
+        String secondString = scanner.nextLine();
+
+        String concatenated1 = firstString + secondString;
+        String concatenated2 = secondString + firstString;
+
+        System.out.println("First concatenation: " + concatenated1);
+        System.out.println("Second concatenation: " + concatenated2);
+
+        if (concatenated1.equals(concatenated2)) {
+            System.out.println("The concatenated strings are the same.");
+        } else {
+            System.out.println("The concatenated strings are different.");
+        }
+    }
+}
