@@ -1,0 +1,41 @@
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
+@EqualsAndHashCode
+public class CarWithLombok {
+    private String model;
+    private String brand;
+    private int year;
+    private int price;
+    private String color;
+    private int quantity;
+}
+
+public class CarDemoWithLombok {
+    public static void main(String[] args) {
+        CarWithLombok car1 = new CarWithLombok();
+        car1.setModel("GLC");
+        car1.setBrand("Mercedes");
+        car1.setYear(2020);
+        car1.setPrice(350_000);
+        car1.setColor("white");
+        car1.setQuantity(5);
+
+        CarWithLombok car2 = new CarWithLombok();
+        car2.setModel("GLC");
+        car2.setBrand("Mercedes");
+        car2.setYear(2023);
+        car2.setPrice(200_000);
+        car2.setColor("silver");
+        car2.setQuantity(3);
+
+        System.out.println(car1);
+        System.out.println(car2);
+
+        System.out.println("Are these objects equal? " + car1.equals(car2));
+        System.out.println("The hashCode of car1 is: " + car1.hashCode());
+        System.out.println("The hashCode of car2 is: " + car2.hashCode());
+   }
+}
