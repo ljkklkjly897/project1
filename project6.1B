@@ -1,0 +1,28 @@
+import java.util.Arrays;
+
+public class Task1B {
+    public static void main(String[] args) {
+        int[] arr = {10, 9, 8, 7, 6, 5, 4, 3, 2, 1};
+        int actionCounter = 0;
+
+        System.out.println("Before:");
+        System.out.println(Arrays.toString(arr));
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            actionCounter++;
+            for (int j = 0; j < arr.length - 1; j++) {
+                actionCounter++;
+                if (arr[j] > arr[j + 1]) {
+                    int temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                    actionCounter += 3;
+                }
+            }
+        }
+
+        System.out.println("After:");
+        System.out.println(Arrays.toString(arr));
+        System.out.println("Number of actions: " + actionCounter);
+    }
+}
